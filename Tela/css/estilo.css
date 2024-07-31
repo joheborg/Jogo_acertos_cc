@@ -1,0 +1,14 @@
+.hoverTd td:hover {
+  background: #cccccc;
+}
+
+.inicio {
+  background-color: #291845;
+}
+
+.titulocapa {
+  font-size: 600% !important;
+  color: white;
+  text-shadow: -2px -2px 0px rgb(255, 0, 230), 2px 2px 0px rgb(0, 4, 255);
+
+}

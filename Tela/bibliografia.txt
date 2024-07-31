@@ -1,0 +1,5 @@
+https://awari.com.br/como-usar-parametros-de-url-em-javascript-guia-completo/
+https://stackoverflow.com/questions/171027/adding-a-table-row-in-jquery
+https://www.w3schools.com/js/js_random.asp  
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else
+https://www.php.net/manual/pt_BR/mysqlinfo.api.choosing.php
