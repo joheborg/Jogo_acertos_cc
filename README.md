@@ -23,6 +23,6 @@ As mesmas informações da tela de acerto no modo binário são apresentadas.
 ![Acerto no Modo Normal](https://github.com/user-attachments/assets/121b8024-aa02-431a-99ac-f79c6caf58f8)
 
 ## Tela de Resultados
-Nesta tela, é possível ver os resultados de outros participantes. Existem dois rankings: modo binário e modo normal, apresentando o top 50. Há também um botão para retornar à tela inicial.
+Nesta tela, é possível ver os resultados de outros participantes. Existem dois rankings: modo binário e modo normal, apresentando o top 10. Há também um botão para retornar à tela inicial.
 
 ![Tela de Resultados](https://github.com/user-attachments/assets/2ea7766c-b3ba-4185-9563-2a8d2689d098)
