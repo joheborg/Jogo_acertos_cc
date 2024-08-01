@@ -21,7 +21,9 @@ function PreencherTabela() {
         const row = $('<tr>');
         for (let i = 0; i < 10; i++) {
             const cellValue = x + i;
-            const cell = $('<td>').text(cellValue).addClass('text-center fs-2 table-hover text-white').prop('id', cellValue);
+            const cell = $('<td>').text(cellValue)
+                .addClass('text-center fs-2 table-hover text-white')
+                .prop('id', cellValue);
             row.append(cell);
             cell.on('click', function () {
                 const valor = $(this).prop('id');
@@ -44,6 +46,7 @@ function PreencherTabela() {
         tabela.append(row);
     }
 }
+
 
 function ResetarTabela() {
     $('#tabela tr td').removeClass('bg-danger').removeClass('bg-success');

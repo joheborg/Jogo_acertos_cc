@@ -43,35 +43,29 @@ function BuscarTopTentativasBinarios() {
 function PreencherTabela(data) {
     const tabela = $('#tabela');
     tabela.empty();
+    data.sort((a, b) => a.ranking - b.ranking);
     data.forEach(item => {
-        const row = `
-            <tr>
-                <td>${item.ranking}</td>
-                <td>${item.tentativas}</td>
-                <td>${item.nome}</td>
-                <td>${new Date(item.dt_registro).toLocaleDateString('pt-BR')}</td>
-            </tr>
-        `;
-        tabela.append(row);
+        $('<tr>').append(
+            $('<td>').text(item.ranking),
+            $('<td>').text(item.tentativas),
+            $('<td>').text(item.nome),
+            $('<td>').text(new Date(item.dt_registro).toLocaleDateString('pt-BR'))
+        ).appendTo(tabela);
     });
 }
+
 
 function PreencherTabelaBinaria(data) {
     const tabela = $('#tabela_binaria');
     tabela.empty();
-
     data.sort((a, b) => a.ranking - b.ranking);
-
     data.forEach(item => {
-        const row = `
-            <tr>
-                <td>${item.ranking}</td>
-                <td>${item.tentativas}</td>
-                <td>${item.nome}</td>
-                <td>${new Date(item.dt_registro).toLocaleDateString('pt-BR')}</td>
-            </tr>
-        `;
-        tabela.append(row);
+        $('<tr>').append(
+            $('<td>').text(item.ranking),
+            $('<td>').text(item.tentativas),
+            $('<td>').text(item.nome),
+            $('<td>').text(new Date(item.dt_registro).toLocaleDateString('pt-BR'))
+        ).appendTo(tabela);
     });
 }
 
