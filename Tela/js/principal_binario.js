@@ -22,7 +22,7 @@ function PreencherTabela() {
             const cellValue = x + i;
             const cell = $('<td>')
                 .text(cellValue)
-                .addClass('text-center fs-4 table-hover text-white')
+                .addClass('text-center fs-5 table-hover text-white')
                 .css('cursor', 'pointer')
                 .prop('id', cellValue);
             row.append(cell);
@@ -35,7 +35,6 @@ function PreencherTabela() {
         tabela.append(row);
     }
 }
-
 
 function ResetarTabela() {
     $('#tabela tr td').removeClass('bg-danger').removeClass('bg-success');
