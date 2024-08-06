@@ -10,6 +10,8 @@ $sql = "SELECT
     tentativas
 FROM 
     trabalho_faculdade.resultados
+where
+    tentativas not null
 ORDER BY 
     tentativas ASC, dt_registro asc
 LIMIT 10;
@@ -17,12 +19,12 @@ LIMIT 10;
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  $dados = array();
-  while ($row = $result->fetch_assoc()) {
-    $dados[] = $row;
-  }
-  echo json_encode($dados);
+    $dados = array();
+    while ($row = $result->fetch_assoc()) {
+        $dados[] = $row;
+    }
+    echo json_encode($dados);
 } else {
-  echo json_encode(array());
+    echo json_encode(array());
 }
 $conn->close();
