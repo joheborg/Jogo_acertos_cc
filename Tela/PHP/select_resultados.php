@@ -11,7 +11,7 @@ $sql = "SELECT
 FROM 
     trabalho_faculdade.resultados
 where
-    tentativas not null
+    tentativas is not null
 ORDER BY 
     tentativas ASC, dt_registro asc
 LIMIT 10;
