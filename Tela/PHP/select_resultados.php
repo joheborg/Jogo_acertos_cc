@@ -12,6 +12,7 @@ FROM
     trabalho_faculdade.resultados
 where
     tentativas is not null
+and acertou = 1
 ORDER BY 
     tentativas ASC, dt_registro asc
 LIMIT 10;

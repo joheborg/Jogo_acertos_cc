@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS `trabalho_faculdade`.`resultados`(
     `nome` VARCHAR(99) NOT NULL,
     `tentativas` INT default null,
     `numero` INT NOT NULL,
+    `acertou` tinyint not null default 0,
     primary key(id)
 );
 
@@ -14,6 +15,7 @@ CREATE TABLE IF NOT EXISTS `trabalho_faculdade`.`resultados_binarios` (
     `nome` varchar(99) NOT NULL,
     `tentativas` int default null,
     `numero` int NOT NULL,
+    `acertou` tinyint not null default 0,
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -120,6 +122,9 @@ BEGIN
         ;
 
         CALL `trabalho_faculdade`.`GRAVARTENTATIVAS`(IDRESULTADO, 'BINARIO');
+        IF RESULTADO != '+' AND RESULTADO != '-' THEN
+            UPDATE resultados_binarios SET ACERTOU = 1 WHERE ID = IDRESULTADO;
+        END IF;
 
     ELSE
         SELECT coalesce(
@@ -131,6 +136,9 @@ BEGIN
         , (select if(r.numero > VNUMERO, '+', '-') from resultados AS r WHERE r.id = IDRESULTADO)) INTO RESULTADO;
 
         CALL `trabalho_faculdade`.`GRAVARTENTATIVAS`(IDRESULTADO, 'NORMAL');
+        IF RESULTADO != '+' AND RESULTADO != '-' THEN
+            UPDATE resultados SET ACERTOU = 1 WHERE ID = IDRESULTADO;
+        END IF;
     END IF;
 
 END $$
